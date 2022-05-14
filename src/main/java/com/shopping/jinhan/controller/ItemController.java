@@ -19,13 +19,6 @@ public class ItemController {
     private final ItemService itemService;
 
 
-    @GetMapping("/item")
-    public String test(@RequestParam String name, @RequestParam int price, @RequestParam int stockQuantity, @RequestParam String author) {
-        Book book = new Book(name, price, stockQuantity, author);
-        System.out.println("book = " + book);
-        return name;
-    }
-
     @GetMapping("/item/create")
     public Item create(@RequestParam String name, @RequestParam int price, @RequestParam int stock, @RequestParam String author) {
         Book book = new Book(name, price, stock, author);
